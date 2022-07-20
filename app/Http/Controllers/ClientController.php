@@ -93,6 +93,15 @@ class ClientController extends Controller
         return $text;
     }
 
+    public function bills($client)
+    {
+        $client = Client::find($client);
+        //dd($client);
+        $clients = Bill::where('client_id', '=', $client->id)->get();
+        //$clientao = $client . $clients;
+        return $clients;
+    }
+
     /**
      * Show the form for editing the specified resource.
      *
