@@ -69,8 +69,8 @@ class ClientController extends Controller
      */
     public function show($client)
     {
-        $client = Client::find($client);
-        return view('eloquent.show', compact('client'));
+        $cliente = Client::find($client);
+        return view('eloquent.show', compact('cliente'));
     }
 
     /**
