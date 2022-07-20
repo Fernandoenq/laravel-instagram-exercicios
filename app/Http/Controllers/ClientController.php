@@ -114,6 +114,14 @@ class ClientController extends Controller
         return $contas;
     }
 
+    public function order()
+    {
+        $client = Client::orderBy('name', 'ASC')->limit(2)->get();
+        //dd($client);
+        //$clientao = $client . $clients;
+        return $client;
+    }
+
     /**
      * Show the form for editing the specified resource.
      *
