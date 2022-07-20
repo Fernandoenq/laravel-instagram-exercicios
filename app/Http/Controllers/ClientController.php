@@ -107,6 +107,12 @@ class ClientController extends Controller
         //$clientao = $client . $clients;
         return $contas;
     }
+    public function between($value1, $value2)
+    {
+        $contas = Bill::where('value', '>', $value1)->where('value', '<', $value2)->get();
+        //$clientao = $client . $clients;
+        return $contas;
+    }
 
     /**
      * Show the form for editing the specified resource.
