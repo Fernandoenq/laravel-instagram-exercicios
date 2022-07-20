@@ -82,10 +82,7 @@ class ClientController extends Controller
         //dd($client);
         //$clients = Bill::where('client_id', '=', $client->id)->get();
         //$clientao = $client . $clients;
-        return view(
-            'eloquent.show',
-             compact('name')
-        );
+        return $name;
     }
 
     /**
