@@ -101,6 +101,12 @@ class ClientController extends Controller
         //$clientao = $client . $clients;
         return $clients;
     }
+    public function value($value)
+    {
+        $contas = Bill::where('value', '>', $value)->get();
+        //$clientao = $client . $clients;
+        return $contas;
+    }
 
     /**
      * Show the form for editing the specified resource.
