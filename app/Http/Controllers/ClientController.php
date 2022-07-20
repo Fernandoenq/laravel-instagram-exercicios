@@ -122,6 +122,13 @@ class ClientController extends Controller
         return $client;
     }
 
+    public function soma($num1, $num2)
+    {
+        $soma = $num1 + $num2;
+        logger()->info('Soma feita');
+        return $soma;
+    }
+
     /**
      * Show the form for editing the specified resource.
      *

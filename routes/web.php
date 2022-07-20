@@ -49,6 +49,11 @@ Route::get('/bills/between/{value1}/{value2}', [ClientController::class, 'betwee
 Route::get('/clients/order', [ClientController::class, 'order']);
 
 
+Route::get('/soma/{num1}/{num2}', [ClientController::class, 'soma']);
+
+
+
+
 
 
 

@@ -41,7 +41,19 @@ class AuthController extends Controller
             $request->session()->regenerate();
             return redirect()->route('dashboard');
         }
+
+        //debuga os erros
+        //info e debud so muda de nome
         
+        //logger()->debug('Login Incorreto');
+        //logger()->info('Login Incorreto', [$request->all()]);
+        //logger()->info('Login Incorreto', [$request->all()]);
+        //logger()->warning('Login Incorreto', [$request->all()]);
+        /*logger()->error('Login Incorreto', [
+            'email' => $request->email,
+            'senha' => $request->password
+
+        ]);*/
         return back()->withError('Usuário ou senha incorretos');
     }
 

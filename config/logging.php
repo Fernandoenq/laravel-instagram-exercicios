@@ -50,7 +50,7 @@ return [
     'channels' => [
         'stack' => [
             'driver' => 'stack',
-            'channels' => ['single'],
+            'channels' => ['daily', 'slack'],//modo de salvar, seja num só arquivo, um por dia, por sites externos
             'ignore_exceptions' => false,
         ],
 
@@ -69,7 +69,7 @@ return [
 
         'slack' => [
             'driver' => 'slack',
-            'url' => env('LOG_SLACK_WEBHOOK_URL'),
+            'url' => env('LOG_WEBHOOK'),
             'username' => 'Laravel Log',
             'emoji' => ':boom:',
             'level' => env('LOG_LEVEL', 'critical'),
@@ -85,7 +85,7 @@ return [
             ],
         ],
 
-        'stderr' => [
+        'stderr' => [//monitorado por outros sistemas
             'driver' => 'monolog',
             'level' => env('LOG_LEVEL', 'debug'),
             'handler' => StreamHandler::class,
@@ -105,7 +105,7 @@ return [
             'level' => env('LOG_LEVEL', 'debug'),
         ],
 
-        'null' => [
+        'null' => [//lugar nenhum
             'driver' => 'monolog',
             'handler' => NullHandler::class,
         ],
