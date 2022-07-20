@@ -4,7 +4,7 @@
 
 @section('content')
     <div class="min-vh-100 d-flex justify-content-center align-items-center">
-        <p>{{ $client }}</p>
+        <p>{{ $clientao }}</p>
         
     </div>
 @endsection
