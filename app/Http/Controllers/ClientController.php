@@ -138,7 +138,7 @@ class ClientController extends Controller
     public function div($num1, $num2)
     {
         if($num2 == 0){
-            logger()->error('Divisor zero');
+            logger()->error('Divisor zero!');
         }else{
             logger()->info('Div feita');
         }
