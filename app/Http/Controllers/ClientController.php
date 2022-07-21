@@ -144,6 +144,13 @@ class ClientController extends Controller
         }
         return $num1;
     }
+    public function mult($num1, $num2)
+    {
+        if($num1 < 0 || $num2 < 0){
+            logger()->warning('Negativo');
+        }
+        return $num1;
+    }
 
     /**
      * Show the form for editing the specified resource.
