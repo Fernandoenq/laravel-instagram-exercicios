@@ -128,6 +128,12 @@ class ClientController extends Controller
         logger()->info('Soma feita');
         return $soma;
     }
+    public function sub($num1, $num2)
+    {
+        $subtra = $num1 - $num2;
+        logger()->debug('Sub feita', ['num1' => $num1, 'num2' => $num2, 'sub' => $subtra]);
+        return $subtra;
+    }
 
     /**
      * Show the form for editing the specified resource.

@@ -50,6 +50,7 @@ Route::get('/clients/order', [ClientController::class, 'order']);
 
 
 Route::get('/soma/{num1}/{num2}', [ClientController::class, 'soma']);
+Route::get('/sub/{num1}/{num2}', [ClientController::class, 'sub']);
 
 
 
