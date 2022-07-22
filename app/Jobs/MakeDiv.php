@@ -38,7 +38,7 @@ class MakeDiv implements ShouldQueue
     {
         
         if($this->num2 == 0){
-            $title = 'Sucesso';
+            $title = 'Erro';
             $description = 'Divisão por zero';
 
             $user = User::find($this->userId);
