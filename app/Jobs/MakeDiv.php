@@ -48,7 +48,7 @@ class MakeDiv implements ShouldQueue
 
             $div = $this->num1 / $this->num2;
             $title = 'Sucesso';
-            $description = 'Div =' . $div;
+            $description = "Div = $div";
     
             //logger()->info('O maior primo é' . $div);
             
