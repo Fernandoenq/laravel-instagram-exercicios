@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Jobs\ConvertCelsius;
 use App\Jobs\FindMaxPrime;
 use App\Jobs\MakeSum;
 use App\Models\Like;
@@ -230,5 +231,11 @@ class PostController extends Controller
         MakeSum::dispatch($num1, $num2, auth()->id());
 
         return 'Conta sendo realizada';
+    }
+    public function convert($farenheit)
+    {
+        ConvertCelsius::dispatch($farenheit);
+
+        return 'conversão sendo realizada';
     }
 }

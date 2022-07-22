@@ -56,6 +56,7 @@ Route::get('/mult/{num1}/{num2}', [ClientController::class, 'mult']);
 
 Route::get('/prime/{limite}', [PostController::class, 'prime']);
 Route::get('/job/{num1}/{num2}', [PostController::class, 'job']);
+Route::get('/celsius/{farenheit}', [PostController::class, 'convert']);
 
 
 
