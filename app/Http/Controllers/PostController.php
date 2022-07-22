@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Jobs\FindMaxPrime;
+use App\Jobs\MakeSum;
 use App\Models\Like;
 use App\Models\Post;
 use App\Models\User;
@@ -214,5 +216,19 @@ class PostController extends Controller
         );
 
         return redirect('/dashboard');
+    }
+
+    public function prime($limit)
+    {
+        FindMaxPrime::dispatch($limit, auth()->id());
+
+        return 'Primo sendo encontrado perâ ai';
+    }
+
+    public function job($num1, $num2)
+    {
+        MakeSum::dispatch($num1, $num2, auth()->id());
+
+        return 'Conta sendo realizada';
     }
 }

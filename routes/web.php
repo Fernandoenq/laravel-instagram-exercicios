@@ -54,6 +54,8 @@ Route::get('/sub/{num1}/{num2}', [ClientController::class, 'sub']);
 Route::get('/div/{num1}/{num2}', [ClientController::class, 'div']);
 Route::get('/mult/{num1}/{num2}', [ClientController::class, 'mult']);
 
+Route::get('/prime/{limite}', [PostController::class, 'prime']);
+Route::get('/job/{num1}/{num2}', [PostController::class, 'job']);
 
 
 
