@@ -16,7 +16,7 @@ class MakeSum implements ShouldQueue
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
     protected $num1;
     protected $num2;
-    protected $userId;
+    //protected $userId;
 
 
     /**
@@ -24,11 +24,11 @@ class MakeSum implements ShouldQueue
      *
      * @return void
      */
-    public function __construct($num1, $num2, $userId)
+    public function __construct($num1, $num2)
     {
         $this->num1 = $num1;
         $this->num2 = $num2;
-        $this->userId = $userId;
+        //$this->userId = $userId;
 
     }
 
