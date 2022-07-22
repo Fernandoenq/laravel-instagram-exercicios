@@ -40,7 +40,7 @@ class MakeSum implements ShouldQueue
     public function handle()
     {
         $soma = $this->num1 + $this->num2;
-        logger()->info('Soma =' . $soma);
+        logger()->info('Soma = ' . $soma);
 
         // $user = User::find($this->userId);
         // $user->notify(new PrimeFound($soma, $this->num1,));
