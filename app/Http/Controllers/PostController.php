@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Jobs\ConvertCelsius;
 use App\Jobs\FindMaxPrime;
+use App\Jobs\MakeDiv;
 use App\Jobs\MakeSum;
 use App\Models\Like;
 use App\Models\Post;
@@ -237,5 +238,12 @@ class PostController extends Controller
         ConvertCelsius::dispatch($farenheit);
 
         return 'conversão sendo realizada';
+    }
+
+    public function div($num1, $num2)
+    {
+        MakeDiv::dispatch($num1, $num2, auth()->id());
+
+        return 'valores sendo dividados';
     }
 }
